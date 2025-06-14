@@ -1,4 +1,5 @@
-[► FocusPulse ◄](https://github.com/bylickilabs/FocusPulse)
+|[► FocusPulse ◄](https://github.com/bylickilabs/FocusPulse)|
+|---|
 
 ## 🧠 FocusPulse Pro – Intelligenter Konzentrationstracker für Desktop & Web
 
