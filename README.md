@@ -185,9 +185,6 @@ MIT License [LICENSE](LICENSE)
 > 🔖 Tags (GitHub Topics)
 
 ```yarn
-css
-Kopieren
-Bearbeiten
 focuspulse
 productivity
 focus-tracker
