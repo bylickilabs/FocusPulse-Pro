@@ -6,7 +6,7 @@
 ![Electron](https://img.shields.io/badge/Electron-27.x-blue?style=for-the-badge&logo=electron) | ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript) | ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white) | ![CSS3](https://img.shields.io/badge/CSS3-Neon-%2300fff7?style=for-the-badge&logo=css3&logoColor=white) | ![Responsive](https://img.shields.io/badge/Responsive-Yes-green?style=for-the-badge) | ![MIT License](https://img.shields.io/github/license/bylickilabs/focuspulse?style=for-the-badge)
 |---|---|---|---|---|---|
 
-|![FocusPulse1](https://github.com/user-attachments/assets/75fcf348-5f31-4017-b785-b35bf9397d2d)|
+|![FocusPulsePro1](https://github.com/user-attachments/assets/43c9bf08-0f0e-464f-957d-b336c76984e1)|
 |---|
 
 <br>
