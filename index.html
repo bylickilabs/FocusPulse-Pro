@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="FocusPulse Pro – Dein visueller Konzentrationstracker">
+  <link rel="icon" href="favicon.ico" />
+  <title>FocusPulse Pro</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 FocusPulse Pro</h1>
+    <p>Konzentriere dich – und analysiere dein Verhalten.</p>
+
+    <div class="view-switch">
+      <button onclick="showToday()" aria-label="Zeige heutige Sitzung">📅 Heute</button>
+      <button onclick="showWeek()" aria-label="Zeige Wochenübersicht">📈 Woche</button>
+    </div>
+
+    <canvas id="focusChart" width="800" height="300" aria-label="Fokusdiagramm"></canvas>
+    <div id="goalbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div id="goalprogress"></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="resetTracking()" aria-label="Tracking zurücksetzen">🔄 Zurücksetzen</button>
+      <button onclick="exportCSV()" aria-label="Exportiere als CSV">📤 Export (CSV)</button>
+      <button onclick="exportJSON()" aria-label="Exportiere als JSON">📁 Export (JSON)</button>
+      <button onclick="clearAllSessions()" aria-label="Alle Sessions löschen">🗑️ Alle Sessions löschen</button>
+      <select id="goalSelect" onchange="setFocusGoal(this.value)" aria-label="Fokusziel">
+  <option value="30">30 Sekunden</option>
+<option value="60">1 Minute</option>
+<option value="120">2 Minuten</option>
+<option value="3600">60 Minuten</option>
+<option value="10800">3 Stunden</option>
+<option value="21600">6 Stunden</option>
+<option value="32400">9 Stunden</option>
+<option value="43200">12 Stunden</option>
+<option value="64800">18 Stunden</option>
+</select>
+
+    </div>
+
+    <div id="summary" role="region" aria-label="Zusammenfassung der aktuellen Sitzung"></div>
+
+    <div class="archive-controls">
+      <input id="sessionName" placeholder="Session speichern als..." aria-label="Sessionname" />
+      <button onclick="saveSession()" aria-label="Session speichern">💾 Speichern</button>
+      <select id="savedSessions" onchange="loadSessionFromArchive()" aria-label="Gespeicherte Sessions laden">
+        <option value="">⬇️ Gespeicherte Sessions</option>
+      </select>
+    </div>
+
+    <div id="sessionOverview" role="region" aria-label="Wochenübersicht"></div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/chart2.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/ai.js"></script>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  window.resetTracking = window.resetTracking || resetTracking;
+  window.loadSessionData = window.loadSessionData || loadSessionData;
+  window.exportCSV = window.exportCSV || exportCSV;
+  window.exportJSON = window.exportJSON || exportJSON;
+});
+</script>
+</body>
+
+</html>

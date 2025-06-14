@@ -1,0 +1,5 @@
+[autorun]
+label=FocusPulse Pro
+icon=icon.ico
+open=FocusPulse Pro Setup.exe
+action=FocusPulse Pro starten

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1e1e2f);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+canvas {
+  margin-top: 1rem;
+  background: #1e1e2f;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00fff7;
+}
+
+.controls, .archive-controls, .view-switch {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button, select {
+  background: #00fff7;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  color: #1e1e2f;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover, select:hover {
+  transform: scale(1.05);
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #00fff7;
+  background: #1e1e2f;
+  color: #00fff7;
+}
+
+#summary {
+  margin-top: 1rem;
+  background: #2e2e3e;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #00fff7 inset;
+}
+
+#goalbar {
+  width: 100%;
+  max-width: 800px;
+  height: 20px;
+  background: #111;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#goalprogress {
+  height: 100%;
+  width: 0;
+  background: #00fff7;
+  transition: width 0.3s ease;
+}
+
+#sessionOverview {
+  margin-top: 2rem;
+  background: #2e2e3e;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 0 6px #00fff7 inset;
+}
+
+.heatmap-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.heatmap-label {
+  width: 110px;
+  text-align: left;
+  font-weight: bold;
+  color: #00fff7;
+}
+
+.heatmap-bar {
+  height: 16px;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.heatmap-percent {
+  width: 50px;
+  text-align: right;
+  font-weight: bold;
+  color: #00fff7;
+}
+
+.heatmap-row button {
+  padding: 4px 8px;
+  background: #00fff7;
+  border: none;
+  color: #1e1e2f;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "focuspulse-pro",
+  "version": "1.0.0",
+  "description": "FocusPulse Pro \u2013 Konzentrationstracker von Thorsten Bylicki",
+  "author": {
+    "name": "Thorsten Bylicki",
+    "email": "support@bylickilabs.de",
+    "url": "https://bylickilabs.de"
+  },
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.bylickilabs.focuspulse",
+    "productName": "FocusPulse Pro",
+    "copyright": "\u00a9 2025 Thorsten Bylicki",
+    "extraMetadata": {
+      "author": "Thorsten Bylicki",
+      "version": "1.0.0"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico",
+      "publisherName": "Thorsten Bylicki"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FocusPulse Pro",
+      "license": "LICENSE.txt"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.icns",
+      "category": "public.app-category.productivity"
+    }
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.0"
+  }
+}
